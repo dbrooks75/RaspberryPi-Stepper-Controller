@@ -18,15 +18,23 @@
   float inchperstep;
 
   //delay 4160 for bigger stepper motor, 480 steps
-  int stepperdelay = 160;
+  int stepperdelay = 1500;
 
 
 int main (void)
 {
-  initGlobals();
-  wiringPiSetup() ;
 
-  moveMountUp(3);
+  wiringPiSetup() ;
+  initGlobals();
+
+//setMountDirection( DIRECTION_UP );
+//delay(3000);
+//setMountDirection( DIRECTION_DOWN );
+
+  moveMountDown(.1);
+delay(3000);
+  moveMountUp(.1);
+
 
   return 0 ;
 }
@@ -63,6 +71,7 @@ int pulsePin(int thePin, int delayMicroSec)
 
 void setMountDirection(int theDirection)
 {
+    printf("Direction: %d \n", theDirection);
     digitalWrite (DIRECTION_PIN, theDirection);
 }
 

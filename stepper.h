@@ -19,8 +19,8 @@ void goHome();
 #define DIRECTION_DOWN 0
 
 #define STEP_PIN 15
-#define DIRECTION_PIN 16
-#define MOTOR_DRIVER_ACTIVE_PIN  7
+#define DIRECTION_PIN 7
+#define MOTOR_DRIVER_ACTIVE_PIN  1
 #define LIMIT_SWITCH_MIN_PIN 9
 
 #define MOTOR_DRIVER_ON  1
