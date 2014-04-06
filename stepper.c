@@ -2,7 +2,7 @@
 // stepper.c - Library for controlling stepper motors
 ///////////////////////////////////////////////////////////////
 
-#include <stdio.h>
+#include <stdio.h> 
 #include <wiringPi.h>
 #include "stepper.h"
 

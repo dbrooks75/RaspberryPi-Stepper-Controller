@@ -1,5 +1,5 @@
 
-void initGlobals();
+void initGlobals(); 
 
 int pulsePin(int thePin, int delayMicroSec);
 
