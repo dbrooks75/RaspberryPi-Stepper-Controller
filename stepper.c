@@ -7,9 +7,9 @@
 #include "stepper.h"
 
   // Motor Specs
-  float degperstep = 1.8;
+  float degperstep = 3.6;
   int stepsperrev;
-  int microstep = 16;
+  int microstep = 1;
 
   // Thread Rod Specs
   int tpi = 12;
@@ -18,7 +18,7 @@
   float inchperstep;
 
   //delay 4160 for bigger stepper motor, 480 steps
-  int stepperdelay = 1500;
+  int stepperdelay = 4160;
 
 
 int main (void)
@@ -34,7 +34,9 @@ int main (void)
   moveMountDown(.1);
 delay(3000);
   moveMountUp(.1);
-
+  moveMountDown(.1);
+delay(3000);
+  moveMountUp(.1);
 
   return 0 ;
 }
@@ -72,6 +74,7 @@ int pulsePin(int thePin, int delayMicroSec)
 void setMountDirection(int theDirection)
 {
     printf("Direction: %d \n", theDirection);
+    printf("Direction Pin: %d \n", DIRECTION_PIN);
     digitalWrite (DIRECTION_PIN, theDirection);
 }
 
